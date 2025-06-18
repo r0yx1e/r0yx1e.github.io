@@ -4,20 +4,61 @@
         <meta charset="UTF-8" />
         <title>Hello</title>
         <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
+            * {
+                box-sizing: border-box;
+                padding: 0;
                 margin: 0;
             }
-            p {
-                text-align: center;
-                font: bold 6vw "Helvetica", sans-serif;
+            @media (orientation: portrait) {
+                :root {
+                    --dynamic-font-size: 10vw;
+                    --dynamic-border-size: 1vw;
+                }
+            }
+
+            @media (orientation: landscape) {
+                :root {
+                    --dynamic-font-size: 10vh;
+                    --dynamic-border-size: 1vh;
+                }
+            }
+
+            :root {
+                --dynamic-color: black;
+                --dynamic-background-color: white;
+                --dynamic-border-color: black;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --dynamic-color: #e8e6e3;
+                    --dynamic-background-color: #181a1b;
+                    --dynamic-border-color: #776e62;
+                }
+            }
+            body {
+                background-color: #00a1fe;
+            }
+            .container {
+                height: 100vh;
+                background-color: var(--dynamic-background-color);
+                border: var(--dynamic-border-size) solid var(--dynamic-border-color);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .text {
+                font-family: Helvetica, sans-serif;
+                font-size: var(--dynamic-font-size);
+                color: var(--dynamic-color);
             }
         </style>
     </head>
     <body>
-        <p>Hey, i am R0YX1E</p>
+        <div class="container">
+            <h1 class="text">Hey, i am R0YX1E</h1>
+        </div>
     </body>
 </html>
+
