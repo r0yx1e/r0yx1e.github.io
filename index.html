@@ -49,6 +49,46 @@
                 font-family: Helvetica, sans-serif;
                 font-size: var(--dynamic-font-size);
                 color: var(--dynamic-color);
+                animation: fontRotate 10s infinite linear;
+            }
+
+            @keyframes fontRotate {
+                0% {
+                    font-family: Helvetica, Arial, sans-serif;
+                } /* 无衬线 */
+                9% {
+                    font-family: "Courier New", Courier, monospace;
+                } /* 等宽 */
+                18% {
+                    font-family: Georgia, serif;
+                } /* 衬线 */
+                27% {
+                    font-family: Impact, Charcoal, sans-serif;
+                } /* 粗体Display */
+                36% {
+                    font-family: "Comic Sans MS", cursive, sans-serif;
+                } /* 手写 */
+                45% {
+                    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+                } /* 中文常用无衬线 */
+                54% {
+                    font-family: "Brush Script MT", cursive;
+                } /* 花体/艺术 */
+                63% {
+                    font-family: "Times New Roman", Times, serif;
+                } /* 经典衬线 */
+                72% {
+                    font-family: "Lucida Console", Monaco, monospace;
+                } /* 等宽风格2 */
+                81% {
+                    font-family: Verdana, Geneva, sans-serif;
+                } /* 宽体无衬线 */
+                90% {
+                    font-family: "Fira Mono", monospace;
+                } /* 现代等宽 */
+                100% {
+                    font-family: Helvetica, Arial, sans-serif;
+                }
             }
         </style>
     </head>
@@ -58,4 +98,3 @@
         </div>
     </body>
 </html>
-
