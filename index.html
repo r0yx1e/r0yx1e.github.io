@@ -36,8 +36,11 @@
                     --dynamic-border-color: #776e62;
                 }
             }
+            html, body {
+                height: 100%;
+            }
             .container {
-                height: 100vh;
+                height: 100%;
                 background-color: var(--dynamic-background-color);
                 /* border: var(--dynamic-border-size) solid var(--dynamic-border-color); */
                 display: flex;
@@ -49,7 +52,7 @@
                 font-family: Helvetica, sans-serif;
                 font-size: var(--dynamic-font-size);
                 color: var(--dynamic-color);
-                animation: fontRotate 15s infinite linear;
+                animation: fontRotate 15s infinite linear; 
             }
 
             @keyframes fontRotate {
